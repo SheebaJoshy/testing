@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
+<title>Updating the database</title>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
 //Establishes the connection
 	$conn = sqlsrv_connect($serverName, $connectionOptions);
 	
-	mysql_query("create table UserNameDB (fname text(20), lname text(20), email text(20), uname text(20))");
+	mysql_query("alter table UserNameDB add columns fname text(20), lname text(20), email text(20), uname text(20)");
 	
 	&fname = $_GET["fnm"];
 	&lname = $_GET["lnm"];
