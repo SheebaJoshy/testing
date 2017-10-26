@@ -18,9 +18,14 @@
 //Establishes the connection
 	$conn = sqlsrv_connect($serverName, $connectionOptions);
 	
-	mysql_query("create table UserNames (fname text(20), lname text(20), email text(20), uname text(20))");
+	mysql_query("create table UserNameDB (fname text(20), lname text(20), email text(20), uname text(20))");
 	
+	&fname = $_GET["fnm"];
+	&lname = $_GET["lnm"];
+	&email = $_GET["email"];
+	&uname = $_GET["uname"];
 	
+	mysql_query("insert into UserNameDB values('&fnaame', '&lname','&email', '&uname')" );
 		
 	?>
 </body>
